@@ -1,0 +1,31 @@
+
+title: "Biography Supplement - Kristina Golubiewski-Davis"
+description: "Professional biography supplement for Full Librarian, Director of University Library Center for Digital Scholarship at UC Santa Cruz"
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-tactile
+
+# Author information
+author:
+  name: "Kristina Golubiewski-Davis"
+  title: "Full Librarian"
+  position: "Director, University Library Center for Digital Scholarship"
+  institution: "UC Santa Cruz University Library"
+
+# Site settings
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

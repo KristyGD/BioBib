@@ -1,0 +1,256 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Fantasy Theme Custom Styles */
+
+/* Import fantasy fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Uncial+Antiqua&display=swap');
+
+/* Color palette inspired by medieval manuscripts and fantasy */
+:root {
+  --parchment: #f4f1e8;
+  --deep-gold: #d4af37;
+  --rich-burgundy: #722f37;
+  --forest-green: #355e3b;
+  --midnight-blue: #191970;
+  --copper: #b87333;
+  --ivory: #fffff0;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Body styling with parchment background */
+body {
+  background: linear-gradient(135deg, var(--parchment) 0%, #ede7d3 100%);
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--rich-burgundy);
+  line-height: 1.6;
+}
+
+/* Header styling with fantasy elements */
+header {
+  background: linear-gradient(135deg, var(--midnight-blue) 0%, var(--forest-green) 100%);
+  border-bottom: 3px solid var(--deep-gold);
+  box-shadow: 0 4px 8px var(--shadow);
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Main title styling */
+h1, .site-title {
+  font-family: 'Cinzel', serif;
+  color: var(--deep-gold);
+  text-shadow: 2px 2px 4px var(--shadow);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Subtitle and description */
+.site-description {
+  color: var(--ivory);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Section headings with decorative elements */
+h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--forest-green);
+  border-bottom: 2px solid var(--deep-gold);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+h2::before {
+  content: '⚜';
+  color: var(--deep-gold);
+  font-size: 1.2em;
+  margin-right: 0.5rem;
+}
+
+h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--rich-burgundy);
+  margin-top: 1.5rem;
+}
+
+h3::before {
+  content: '❦';
+  color: var(--copper);
+  margin-right: 0.3rem;
+}
+
+/* Content areas with parchment styling */
+.main-content {
+  background: var(--ivory);
+  border: 2px solid var(--deep-gold);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 6px 12px var(--shadow);
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid var(--copper);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* List styling with fantasy bullets */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+li::before {
+  content: '⚬';
+  color: var(--deep-gold);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Nested list styling */
+ul ul li::before {
+  content: '◦';
+  color: var(--copper);
+}
+
+/* Links with fantasy styling */
+a {
+  color: var(--forest-green);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--forest-green);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--deep-gold);
+  border-bottom: 1px solid var(--deep-gold);
+  text-shadow: 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+/* Blockquotes as illuminated manuscripts */
+blockquote {
+  background: linear-gradient(135deg, #f9f7f1 0%, #f0ede3 100%);
+  border-left: 5px solid var(--deep-gold);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  position: relative;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--deep-gold);
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+  font-family: 'Cinzel', serif;
+}
+
+/* Emphasis and strong text */
+em {
+  color: var(--forest-green);
+  font-style: italic;
+}
+
+strong {
+  color: var(--rich-burgundy);
+  font-weight: 600;
+}
+
+/* Special styling for marked text */
+.mark, mark {
+  background: linear-gradient(120deg, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.1) 100%);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  color: var(--rich-burgundy);
+}
+
+/* Underlined text styling */
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--deep-gold);
+  text-decoration-thickness: 2px;
+}
+
+/* Date styling */
+.date {
+  font-family: 'Uncial Antiqua', cursive;
+  color: var(--copper);
+  font-size: 0.9rem;
+}
+
+/* Footer styling */
+footer {
+  background: var(--rich-burgundy);
+  color: var(--ivory);
+  text-align: center;
+  padding: 1rem;
+  border-top: 3px solid var(--deep-gold);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .main-content {
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  
+  a {
+    color: black;
+    border-bottom: none;
+  }
+}

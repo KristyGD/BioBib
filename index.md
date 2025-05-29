@@ -13,6 +13,11 @@ Digital Scholarship]{.mark}
 Library.]{.underline}\
 ]{.mark}**
 
+---
+
+
+---
+
 A.  **[General Statement of Responsibilities:]{.mark}**
 
 > [DSC/DSI = Digital Scholarship Commons and Digital Scholarship
